@@ -1,6 +1,8 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:tryft/dashboard.dart';
+import 'package:tryft/utils/theme.dart';
 import 'package:window_size/window_size.dart';
 
 void main() {
@@ -17,8 +19,6 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-    );
+    return MaterialApp(title: 'Flutter Demo', theme: theme, home: Dashboard());
   }
 }

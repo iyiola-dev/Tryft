@@ -1,6 +1,6 @@
 # tryft
 
-A new Flutter project.
+A Flutter Desktop UI
 
 ## Getting Started
 
