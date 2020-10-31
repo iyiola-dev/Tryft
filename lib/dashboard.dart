@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tryft/utils/config.dart';
+import 'package:tryft/utils/theme.dart';
 import 'package:tryft/utils/widgets/firstWidget.dart';
 
 class Dashboard extends StatelessWidget {
@@ -21,7 +22,8 @@ class Dashboard extends StatelessWidget {
             Container(
               height: MediaQuery.of(context).size.height,
               width: Config.xMargin(context, 56),
-              color: Colors.white30,
+              //color: Colors.white30,
+              color: Theme.of(context).accentColor,
             ),
             Container(
                 height: MediaQuery.of(context).size.height,

@@ -16,6 +16,42 @@ class FirstWidget extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                     fontSize: Config.textSize(context, 1.9)))
           ],
+        ),
+        SizedBox(
+          height: Config.yMargin(context, 10),
+        ),
+        Container(
+            padding: const EdgeInsets.only(bottom: 10),
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(8),
+                color: Theme.of(context).accentColor,
+                shape: BoxShape.rectangle),
+            height: Config.yMargin(context, 6),
+            child: ListTile(
+                dense: true,
+                leading: Image.asset('images/card.png'),
+                title: Text('Dashboard', style: GoogleFonts.ubuntu()))),
+        SizedBox(
+          height: 20,
+        ),
+        ListTile(
+          leading: Image.asset('images/classes.png'),
+          title: Text('classes', style: GoogleFonts.ubuntu()),
+        ),
+        ListTile(
+            leading: Image.asset('images/briefcase.png'),
+            title: Text('Resources', style: GoogleFonts.ubuntu())),
+        ListTile(
+          leading: Icon(Icons.calendar_today),
+          title: Text('Learning Plan', style: GoogleFonts.ubuntu(fontSize: 15)),
+        ),
+        ListTile(
+          leading: Image.asset('images/chats.png'),
+          title: Text('Chat', style: GoogleFonts.ubuntu()),
+        ),
+        ListTile(
+          leading: Icon(Icons.settings),
+          title: Text('Settings', style: GoogleFonts.ubuntu()),
         )
       ],
     );
