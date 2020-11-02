@@ -35,23 +35,106 @@ class FirstWidget extends StatelessWidget {
           height: 20,
         ),
         ListTile(
+          dense: true,
           leading: Image.asset('images/classes.png'),
           title: Text('classes', style: GoogleFonts.ubuntu()),
         ),
         ListTile(
+            dense: true,
             leading: Image.asset('images/briefcase.png'),
             title: Text('Resources', style: GoogleFonts.ubuntu())),
         ListTile(
+          dense: true,
           leading: Icon(Icons.calendar_today),
-          title: Text('Learning Plan', style: GoogleFonts.ubuntu(fontSize: 15)),
+          title: Text('Learning Plan', style: GoogleFonts.ubuntu()),
         ),
         ListTile(
+          dense: true,
           leading: Image.asset('images/chats.png'),
           title: Text('Chat', style: GoogleFonts.ubuntu()),
         ),
         ListTile(
+          dense: true,
           leading: Icon(Icons.settings),
           title: Text('Settings', style: GoogleFonts.ubuntu()),
+        ),
+        SizedBox(
+          height: Config.yMargin(context, 6),
+        ),
+        Container(
+          height: Config.yMargin(context, 26),
+          child: Stack(
+            children: [
+              Column(
+                children: [
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Container(
+                    padding: const EdgeInsets.all(12),
+                    height: Config.yMargin(context, 22),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(12),
+                      color: Theme.of(context).accentColor,
+                    ),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        SizedBox(
+                          height: 20,
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              'Upgrade to',
+                              style: GoogleFonts.ubuntu(
+                                  color: Colors.grey, fontSize: 12),
+                            ),
+                            SizedBox(
+                              width: 5,
+                            ),
+                            Text('PRO',
+                                style: GoogleFonts.ubuntu(
+                                    fontWeight: FontWeight.bold, fontSize: 12)),
+                            SizedBox(
+                              width: 5,
+                            ),
+                            Text(
+                              'for ',
+                              style: GoogleFonts.ubuntu(
+                                  color: Colors.grey, fontSize: 12),
+                            )
+                          ],
+                        ),
+                        Text(
+                          'more resources',
+                          style: GoogleFonts.ubuntu(
+                              color: Colors.grey, fontSize: 12),
+                        ),
+                        SizedBox(height: 20),
+                        Container(
+                          height: 30,
+                          decoration: BoxDecoration(
+                              color: Theme.of(context).primaryColor,
+                              borderRadius: BorderRadius.circular(8)),
+                          child: Center(
+                            child: Text('Upgrade'),
+                          ),
+                        )
+                      ],
+                    ),
+                  )
+                ],
+              ),
+              Container(
+                height: Config.yMargin(context, 8),
+                child: Center(
+                    child:
+                        Image.asset('images/card2.png', fit: BoxFit.contain)),
+              )
+            ],
+          ),
         )
       ],
     );
