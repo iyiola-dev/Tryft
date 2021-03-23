@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:tryft/utils/config.dart';
+import 'package:tryft/utils/tryftSize.dart';
 
 class FirstWidget extends StatelessWidget {
   @override
@@ -14,11 +14,11 @@ class FirstWidget extends StatelessWidget {
             Text("TRYFT",
                 style: GoogleFonts.ubuntu(
                     fontWeight: FontWeight.bold,
-                    fontSize: Config.textSize(context, 1.9)))
+                    fontSize: TryftSize.textSize(context, 1.9)))
           ],
         ),
         SizedBox(
-          height: Config.yMargin(context, 10),
+          height: TryftSize.yMargin(context, 10),
         ),
         Container(
             padding: const EdgeInsets.only(bottom: 10),
@@ -26,7 +26,7 @@ class FirstWidget extends StatelessWidget {
                 borderRadius: BorderRadius.circular(8),
                 color: Theme.of(context).accentColor,
                 shape: BoxShape.rectangle),
-            height: Config.yMargin(context, 6),
+            height: TryftSize.yMargin(context, 6),
             child: ListTile(
                 dense: true,
                 leading: Image.asset('images/card.png'),
@@ -59,10 +59,10 @@ class FirstWidget extends StatelessWidget {
           title: Text('Settings', style: GoogleFonts.ubuntu()),
         ),
         SizedBox(
-          height: Config.yMargin(context, 6),
+          height: TryftSize.yMargin(context, 6),
         ),
         Container(
-          height: Config.yMargin(context, 26),
+          height: TryftSize.yMargin(context, 26),
           child: Stack(
             children: [
               Column(
@@ -72,7 +72,7 @@ class FirstWidget extends StatelessWidget {
                   ),
                   Container(
                     padding: const EdgeInsets.all(12),
-                    height: Config.yMargin(context, 22),
+                    height: TryftSize.yMargin(context, 22),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(12),
                       color: Theme.of(context).accentColor,
@@ -128,7 +128,7 @@ class FirstWidget extends StatelessWidget {
                 ],
               ),
               Container(
-                height: Config.yMargin(context, 8),
+                height: TryftSize.yMargin(context, 8),
                 child: Center(
                     child:
                         Image.asset('images/card2.png', fit: BoxFit.contain)),

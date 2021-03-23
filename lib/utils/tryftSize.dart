@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 //A custom class for handling text size, margin szie and other responsiveness related issues
-class Config {
+class TryftSize {
   // static keyword included so you can call this method without instantiating an object of it like so :
   // Config.yMargin(context, 2)
   static double yMargin(BuildContext context, double height) {
