@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:tryft/utils/theme.dart';
+import 'package:tryft/utils/widgets/tiles.dart';
 
 class ThirdWidget extends StatelessWidget {
   @override
@@ -16,7 +18,7 @@ class ThirdWidget extends StatelessWidget {
             height: 30,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(8),
-              color: Theme.of(context).accentColor,
+              color: accentColor,
             ),
             child: ElevatedButton(
               onPressed: null,
@@ -73,7 +75,16 @@ class ThirdWidget extends StatelessWidget {
           SizedBox(
             height: 10,
           ),
-          ListTile()
+          SizedBox(
+            child: Tiles(
+              title: 'Igbo',
+              headWidget: Text(
+                'A1',
+                style: GoogleFonts.ubuntu(fontWeight: FontWeight.bold),
+              ),
+              headColor: Color(0x1AC4C4C4),
+            ),
+          )
         ],
       ),
     );

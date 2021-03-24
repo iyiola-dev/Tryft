@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:tryft/utils/theme.dart';
 import 'package:tryft/utils/tryftSize.dart';
 
 class FirstWidget extends StatelessWidget {
@@ -24,7 +25,7 @@ class FirstWidget extends StatelessWidget {
             padding: const EdgeInsets.only(bottom: 10),
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(8),
-                color: Theme.of(context).accentColor,
+                color: accentColor,
                 shape: BoxShape.rectangle),
             height: TryftSize.yMargin(context, 6),
             child: ListTile(
@@ -75,7 +76,7 @@ class FirstWidget extends StatelessWidget {
                     height: TryftSize.yMargin(context, 22),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(12),
-                      color: Theme.of(context).accentColor,
+                      color: accentColor,
                     ),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -116,7 +117,7 @@ class FirstWidget extends StatelessWidget {
                         Container(
                           height: 30,
                           decoration: BoxDecoration(
-                              color: Theme.of(context).primaryColor,
+                              color: primaryColor,
                               borderRadius: BorderRadius.circular(8)),
                           child: Center(
                             child: Text('Upgrade'),
