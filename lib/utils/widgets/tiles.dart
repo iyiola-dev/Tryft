@@ -42,3 +42,39 @@ class Tiles extends StatelessWidget {
         ]);
   }
 }
+
+class RowTiles extends StatelessWidget {
+  Color headerColor;
+  IconData icon;
+  Color iconColor;
+  String title;
+  String subtitle;
+  RowTiles(
+      {this.headerColor, this.icon, this.iconColor, this.subtitle, this.title});
+  @override
+  Widget build(BuildContext context) {
+    return ListTile(
+      leading: Container(
+        height: 50,
+        width: 50,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(10),
+          color: headerColor,
+        ),
+        child: Center(
+            child: Icon(
+          icon,
+          color: iconColor,
+        )),
+      ),
+      title: Text(
+        title,
+        style: GoogleFonts.ubuntu(fontSize: 12, fontWeight: FontWeight.bold),
+      ),
+      subtitle: Text(
+        subtitle,
+        style: GoogleFonts.ubuntu(fontSize: 9.5, color: Colors.grey),
+      ),
+    );
+  }
+}

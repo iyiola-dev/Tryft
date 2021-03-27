@@ -7,6 +7,7 @@ import 'package:tryft/utils/widgets/tiles.dart';
 class ThirdWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    ScrollController controller;
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 14),
       child: Column(
@@ -37,9 +38,7 @@ class ThirdWidget extends StatelessWidget {
               child: Image.asset('images/background.png'),
             ),
             Positioned(
-                left: 92,
-                top: 85.6,
-                child: Image.asset('images/plus-circle.png')),
+                left: 92, top: 85.6, child: Image.asset("images/plus.png")),
           ])
               //Icon(Icons.add),
               ),
@@ -113,6 +112,93 @@ class ThirdWidget extends StatelessWidget {
               headColor: headTilesColor,
             ),
           ),
+          SizedBox(
+            height: 20,
+          ),
+          SizedBox(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text('Remainder',
+                    style: GoogleFonts.ubuntu(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 13,
+                    )),
+                Image.asset('images/bell.png')
+              ],
+            ),
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          SizedBox(
+            height: 200,
+            child: Scrollbar(
+                isAlwaysShown: true,
+                controller: controller,
+                child: ListView(
+                  controller: controller,
+                  children: [
+                    RowTiles(
+                      headerColor: tileButtonColor,
+                      icon: Icons.info_outline_rounded,
+                      iconColor: Colors.red,
+                      title: 'Mth- Class quiz',
+                      subtitle: '14 Aug 2020, Thursday',
+                    ),
+                    SizedBox(
+                      height: 15,
+                    ),
+                    RowTiles(
+                      headerColor: secondaryTileButtonColor,
+                      icon: Icons.email_outlined,
+                      iconColor: Color(0xff7592F5),
+                      title: 'Eng- Vocabulary test',
+                      subtitle: '14 Aug 2020, Thursday',
+                    ),
+                    SizedBox(
+                      height: 15,
+                    ),
+                    RowTiles(
+                      headerColor: fadedTileColor,
+                      icon: Icons.email_outlined,
+                      iconColor: Color(0xff7592F5),
+                      title: 'Spanish- Word buzz',
+                      subtitle: '14 Aug 2020, Thursday',
+                    ),
+                    SizedBox(
+                      height: 15,
+                    ),
+                    RowTiles(
+                      headerColor: fadedGreen,
+                      icon: Icons.email_outlined,
+                      iconColor: Colors.green,
+                      title: 'Physics- Motion test',
+                      subtitle: '14 Aug 2020, Thursday',
+                    ),
+                    SizedBox(
+                      height: 15,
+                    ),
+                    RowTiles(
+                      headerColor: secondaryTileButtonColor,
+                      icon: Icons.email_outlined,
+                      iconColor: Color(0xff7592F5),
+                      title: 'Eng- Vocabulary test',
+                      subtitle: '14 Aug 2020, Thursday',
+                    ),
+                    SizedBox(
+                      height: 15,
+                    ),
+                    RowTiles(
+                      headerColor: secondaryTileButtonColor,
+                      icon: Icons.email_outlined,
+                      iconColor: Color(0xff7592F5),
+                      title: 'Eng- Vocabulary test',
+                      subtitle: '14 Aug 2020, Thursday',
+                    ),
+                  ],
+                )),
+          )
         ],
       ),
     );

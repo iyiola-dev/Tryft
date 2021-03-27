@@ -8,3 +8,7 @@ Color dialogBackgroundColor = Color(0xffFF606D);
 Color buttonColor = Color(0xff5E60CE);
 Color headTilesColor = Color(0x1AC4C4C4);
 Color topButtonColor = Color(0x0dBDBDBD);
+Color tileButtonColor = Color(0x1aFF606D);
+Color secondaryTileButtonColor = Color(0x337592F5);
+Color fadedTileColor = Color(0x1a4D4CAC);
+Color fadedGreen = Color(0x3344F040);
