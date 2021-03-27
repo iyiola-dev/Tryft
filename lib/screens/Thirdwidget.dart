@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:percent_indicator/percent_indicator.dart';
 import 'package:tryft/utils/theme.dart';
 import 'package:tryft/utils/widgets/tiles.dart';
 
@@ -16,12 +17,12 @@ class ThirdWidget extends StatelessWidget {
           ListTile(
               trailing: Container(
             height: 30,
+            width: 60,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(8),
-              color: accentColor,
+              color: topButtonColor,
             ),
-            child: ElevatedButton(
-              onPressed: null,
+            child: Center(
               child: Text(
                 'Logout',
                 style: GoogleFonts.ubuntu(color: Colors.grey),
@@ -36,17 +37,9 @@ class ThirdWidget extends StatelessWidget {
               child: Image.asset('images/background.png'),
             ),
             Positioned(
-              left: 92,
-              top: 85.6,
-              child: CircleAvatar(
-                maxRadius: 10,
-                backgroundColor: Theme.of(context).cardColor,
-                child: Icon(
-                  Icons.add,
-                  color: Colors.white,
-                ),
-              ),
-            ),
+                left: 92,
+                top: 85.6,
+                child: Image.asset('images/plus-circle.png')),
           ])
               //Icon(Icons.add),
               ),
@@ -77,14 +70,49 @@ class ThirdWidget extends StatelessWidget {
           ),
           SizedBox(
             child: Tiles(
+              trailing: SizedBox(
+                width: 20,
+                child: LinearPercentIndicator(
+                  width: 100.0,
+                  lineHeight: 8.0,
+                  percent: 0.8,
+                  progressColor: buttonColor,
+                ),
+              ),
+              subtitle: 'High Intermediate',
               title: 'Igbo',
               headWidget: Text(
                 'A1',
-                style: GoogleFonts.ubuntu(fontWeight: FontWeight.bold),
+                style: GoogleFonts.ubuntu(
+                    fontSize: 10, fontWeight: FontWeight.bold),
               ),
-              headColor: Color(0x1AC4C4C4),
+              headColor: headTilesColor,
             ),
-          )
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          SizedBox(
+            child: Tiles(
+              trailing: SizedBox(
+                width: 20,
+                child: LinearPercentIndicator(
+                  width: 100.0,
+                  lineHeight: 8.0,
+                  percent: 0.7,
+                  progressColor: buttonColor,
+                ),
+              ),
+              subtitle: 'Advanced',
+              title: 'Yoruba         ',
+              headWidget: Text(
+                'B3',
+                style: GoogleFonts.ubuntu(
+                    fontSize: 10, fontWeight: FontWeight.bold),
+              ),
+              headColor: headTilesColor,
+            ),
+          ),
         ],
       ),
     );

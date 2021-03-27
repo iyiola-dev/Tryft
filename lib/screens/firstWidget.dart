@@ -31,33 +31,37 @@ class FirstWidget extends StatelessWidget {
             child: ListTile(
                 dense: true,
                 leading: Image.asset('images/card.png'),
-                title: Text('Dashboard', style: GoogleFonts.ubuntu()))),
+                title: Text('Dashboard',
+                    style: GoogleFonts.ubuntu(color: Colors.grey)))),
         SizedBox(
-          height: 20,
+          height: 10,
         ),
         ListTile(
           dense: true,
           leading: Image.asset('images/classes.png'),
-          title: Text('classes', style: GoogleFonts.ubuntu()),
+          title: Text('classes', style: GoogleFonts.ubuntu(color: Colors.grey)),
         ),
         ListTile(
             dense: true,
             leading: Image.asset('images/briefcase.png'),
-            title: Text('Resources', style: GoogleFonts.ubuntu())),
+            title: Text('Resources',
+                style: GoogleFonts.ubuntu(color: Colors.grey))),
         ListTile(
           dense: true,
           leading: Icon(Icons.calendar_today),
-          title: Text('Learning Plan', style: GoogleFonts.ubuntu()),
+          title: Text('Learning Plan',
+              style: GoogleFonts.ubuntu(color: Colors.grey)),
         ),
         ListTile(
           dense: true,
           leading: Image.asset('images/chats.png'),
-          title: Text('Chat', style: GoogleFonts.ubuntu()),
+          title: Text('Chat', style: GoogleFonts.ubuntu(color: Colors.grey)),
         ),
         ListTile(
           dense: true,
           leading: Icon(Icons.settings),
-          title: Text('Settings', style: GoogleFonts.ubuntu()),
+          title:
+              Text('Settings', style: GoogleFonts.ubuntu(color: Colors.grey)),
         ),
         SizedBox(
           height: TryftSize.yMargin(context, 6),

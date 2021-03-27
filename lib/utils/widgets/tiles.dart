@@ -5,26 +5,40 @@ class Tiles extends StatelessWidget {
   Widget headWidget;
   Color headColor;
   String title;
-  Tiles({this.headWidget, this.headColor, this.title});
+  String subtitle;
+  Widget trailing;
+  Tiles(
+      {this.headWidget,
+      this.headColor,
+      this.title,
+      this.subtitle,
+      this.trailing});
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 100,
-      child: ListTile(
-        leading: Container(
-          height: 50,
-          width: 50,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(10),
-            color: headColor,
+    return Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        mainAxisSize: MainAxisSize.max,
+        children: [
+          Container(
+            height: 50,
+            width: 50,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(10),
+              color: headColor,
+            ),
+            child: Center(child: headWidget),
           ),
-          child: Center(child: headWidget),
-        ),
-        title: Text(
-          title,
-          style: GoogleFonts.ubuntu(fontWeight: FontWeight.bold),
-        ),
-      ),
-    );
+          Wrap(direction: Axis.vertical, children: [
+            Text(
+              title,
+              style: GoogleFonts.ubuntu(fontWeight: FontWeight.bold),
+            ),
+            Text(
+              subtitle,
+              style: GoogleFonts.ubuntu(fontSize: 9.5, color: Colors.grey),
+            ),
+          ]),
+          Expanded(child: trailing),
+        ]);
   }
 }
