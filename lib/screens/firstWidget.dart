@@ -73,7 +73,7 @@ class FirstWidget extends StatelessWidget {
           title: Text('Settings', style: TextStyle(color: Colors.grey)),
         ),
         SizedBox(
-          height: TryftSize.yMargin(context, 9),
+          height: TryftSize.yMargin(context, 20),
         ),
         Container(
           height: TryftSize.yMargin(context, 26),
