@@ -2,12 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 import 'package:tryft/utils/theme.dart';
+import 'package:tryft/utils/tryftSize.dart';
 import 'package:tryft/utils/widgets/tiles.dart';
 
 class ThirdWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    ScrollController controller;
+    final ScrollController controller = ScrollController();
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 14),
       child: Column(
@@ -55,7 +56,7 @@ class ThirdWidget extends StatelessWidget {
             style: GoogleFonts.ubuntu(color: Colors.grey),
           ),
           SizedBox(
-            height: 30,
+            height: TryftSize.yMargin(context, 7),
           ),
           Container(
             alignment: Alignment.centerLeft,
@@ -113,7 +114,7 @@ class ThirdWidget extends StatelessWidget {
             ),
           ),
           SizedBox(
-            height: 20,
+            height: TryftSize.yMargin(context, 7.5),
           ),
           SizedBox(
             child: Row(
@@ -129,10 +130,10 @@ class ThirdWidget extends StatelessWidget {
             ),
           ),
           SizedBox(
-            height: 20,
+            height: TryftSize.yMargin(context, 3),
           ),
           SizedBox(
-            height: 200,
+            height: TryftSize.yMargin(context, 30),
             child: Scrollbar(
                 isAlwaysShown: true,
                 controller: controller,

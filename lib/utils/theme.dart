@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 Color backgroundColor = Color(0xffF5F5FB);
 Color primaryColor = Color.fromRGBO(94, 96, 206, 1);
@@ -12,3 +13,6 @@ Color tileButtonColor = Color(0x1aFF606D);
 Color secondaryTileButtonColor = Color(0x337592F5);
 Color fadedTileColor = Color(0x1a4D4CAC);
 Color fadedGreen = Color(0x3344F040);
+Color fadedPrimary = Color(0x1a5E60CE);
+Color fadedWhite = Color(0x33FFFFFF);
+Color tileColor = Color(0xffFF808B);

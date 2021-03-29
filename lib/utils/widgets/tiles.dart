@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import '../theme.dart';
+import '../tryftSize.dart';
+
 class Tiles extends StatelessWidget {
   Widget headWidget;
   Color headColor;
@@ -74,6 +77,70 @@ class RowTiles extends StatelessWidget {
       subtitle: Text(
         subtitle,
         style: GoogleFonts.ubuntu(fontSize: 9.5, color: Colors.grey),
+      ),
+    );
+  }
+}
+
+class SlimTile extends StatelessWidget {
+  Color cardColor;
+  String title;
+  String subtitle;
+  SlimTile({this.cardColor, this.title, this.subtitle});
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 10),
+      width: TryftSize.xMargin(context, 22),
+      height: 10,
+      decoration: BoxDecoration(
+          color: cardColor, borderRadius: BorderRadius.circular(12)),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Container(
+            height: 50,
+            width: 50,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(10),
+              color: fadedWhite,
+            ),
+            child: Center(
+              child: Text(
+                'A1',
+                style: GoogleFonts.ubuntu(
+                    color: Colors.white,
+                    fontSize: 10,
+                    fontWeight: FontWeight.bold),
+              ),
+            ),
+          ),
+          Wrap(
+            direction: Axis.vertical,
+            children: [
+              Text(title,
+                  style: TextStyle(
+                    color: fadedWhite,
+                  )),
+              SizedBox(
+                height: 7,
+              ),
+              Text(
+                subtitle,
+                style: TextStyle(color: Colors.white),
+              )
+            ],
+          ),
+          Column(mainAxisAlignment: MainAxisAlignment.end, children: [
+            Icon(
+              Icons.arrow_right_alt,
+              color: Colors.white,
+            ),
+            SizedBox(
+              height: 17,
+            ),
+          ])
+        ],
       ),
     );
   }

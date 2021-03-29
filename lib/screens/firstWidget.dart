@@ -34,28 +34,40 @@ class FirstWidget extends StatelessWidget {
                 title: Text('Dashboard',
                     style: GoogleFonts.ubuntu(color: Colors.grey)))),
         SizedBox(
-          height: 10,
+          height: TryftSize.yMargin(context, 1.5),
         ),
         ListTile(
           dense: true,
           leading: Image.asset('images/classes.png'),
           title: Text('classes', style: GoogleFonts.ubuntu(color: Colors.grey)),
         ),
+        SizedBox(
+          height: TryftSize.yMargin(context, 1.5),
+        ),
         ListTile(
             dense: true,
             leading: Image.asset('images/briefcase.png'),
             title: Text('Resources',
                 style: GoogleFonts.ubuntu(color: Colors.grey))),
+        SizedBox(
+          height: TryftSize.yMargin(context, 1.5),
+        ),
         ListTile(
           dense: true,
           leading: Icon(Icons.calendar_today),
           title: Text('Learning Plan',
               style: GoogleFonts.ubuntu(color: Colors.grey)),
         ),
+        SizedBox(
+          height: TryftSize.yMargin(context, 1.5),
+        ),
         ListTile(
           dense: true,
           leading: Image.asset('images/chats.png'),
           title: Text('Chat', style: GoogleFonts.ubuntu(color: Colors.grey)),
+        ),
+        SizedBox(
+          height: TryftSize.yMargin(context, 1.5),
         ),
         ListTile(
           dense: true,
@@ -64,7 +76,7 @@ class FirstWidget extends StatelessWidget {
               Text('Settings', style: GoogleFonts.ubuntu(color: Colors.grey)),
         ),
         SizedBox(
-          height: TryftSize.yMargin(context, 6),
+          height: TryftSize.yMargin(context, 9),
         ),
         Container(
           height: TryftSize.yMargin(context, 26),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tryft/screens/secondWIdget.dart';
 import 'package:tryft/utils/theme.dart';
 import 'package:tryft/utils/tryftSize.dart';
 import 'package:tryft/screens/Thirdwidget.dart';
@@ -25,6 +26,7 @@ class Dashboard extends StatelessWidget {
               width: TryftSize.xMargin(context, 54),
               //color: Colors.white30,
               color: accentColor,
+              child: SecondWidget(),
             ),
             Container(
                 child: ThirdWidget(),
