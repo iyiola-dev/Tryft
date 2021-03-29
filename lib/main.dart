@@ -10,8 +10,8 @@ void main() {
   WidgetsFlutterBinding.ensureInitialized();
   if (Platform.isWindows || Platform.isLinux || Platform.isMacOS) {
     setWindowTitle('TRYFT');
-    setWindowMinSize(const Size(950, 900));
-    setWindowMaxSize(Size(2000, 1000));
+    setWindowMinSize(const Size(1000, 1060));
+    setWindowMaxSize(Size(2000, 1100));
   }
   runApp(MyApp());
 }

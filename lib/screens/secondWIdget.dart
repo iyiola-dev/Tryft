@@ -8,7 +8,7 @@ class SecondWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(12),
+      padding: const EdgeInsets.symmetric(horizontal: 22, vertical: 10),
       child: ListView(
         children: [
           Row(
@@ -16,14 +16,13 @@ class SecondWidget extends StatelessWidget {
             children: [
               Text(
                 'Dashboard',
-                style: GoogleFonts.ubuntu(
-                    fontSize: 16, fontWeight: FontWeight.bold),
+                style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
               ),
               Wrap(
                 children: [
                   Text(
                     '\n14 Aug 2020, Thursday',
-                    style: GoogleFonts.ubuntu(fontSize: 12, color: Colors.grey),
+                    style: TextStyle(fontSize: 12, color: Colors.grey),
                   ),
                   SizedBox(
                     width: 10,
@@ -63,7 +62,7 @@ class SecondWidget extends StatelessWidget {
                   children: [
                     Text(
                       'Welcome back, Emmanuel!',
-                      style: GoogleFonts.ubuntu(
+                      style: TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.bold,
                           color: dialogBackgroundColor),
@@ -79,19 +78,29 @@ class SecondWidget extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(
+          Container(
             height: TryftSize.yMargin(context, 50),
+            child: Row(
+              children: [
+                Container(
+                  height: TryftSize.yMargin(context, 43),
+                  width: TryftSize.xMargin(context, 23),
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(14)),
+                )
+              ],
+            ),
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
                 'My Courses',
-                style: GoogleFonts.ubuntu(fontWeight: FontWeight.bold),
+                style: TextStyle(fontWeight: FontWeight.bold),
               ),
               Row(children: [
-                Text('view more',
-                    style: GoogleFonts.ubuntu(color: Colors.grey)),
+                Text('view more', style: TextStyle(color: Colors.grey)),
                 Icon(
                   Icons.arrow_right_alt,
                   color: Colors.grey,

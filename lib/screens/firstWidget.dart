@@ -13,7 +13,7 @@ class FirstWidget extends StatelessWidget {
           children: [
             Image.asset("images/logo.png"),
             Text("TRYFT",
-                style: GoogleFonts.ubuntu(
+                style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: TryftSize.textSize(context, 1.9)))
           ],
@@ -31,15 +31,15 @@ class FirstWidget extends StatelessWidget {
             child: ListTile(
                 dense: true,
                 leading: Image.asset('images/card.png'),
-                title: Text('Dashboard',
-                    style: GoogleFonts.ubuntu(color: Colors.grey)))),
+                title:
+                    Text('Dashboard', style: TextStyle(color: Colors.grey)))),
         SizedBox(
           height: TryftSize.yMargin(context, 1.5),
         ),
         ListTile(
           dense: true,
           leading: Image.asset('images/classes.png'),
-          title: Text('classes', style: GoogleFonts.ubuntu(color: Colors.grey)),
+          title: Text('classes', style: TextStyle(color: Colors.grey)),
         ),
         SizedBox(
           height: TryftSize.yMargin(context, 1.5),
@@ -47,16 +47,14 @@ class FirstWidget extends StatelessWidget {
         ListTile(
             dense: true,
             leading: Image.asset('images/briefcase.png'),
-            title: Text('Resources',
-                style: GoogleFonts.ubuntu(color: Colors.grey))),
+            title: Text('Resources', style: TextStyle(color: Colors.grey))),
         SizedBox(
           height: TryftSize.yMargin(context, 1.5),
         ),
         ListTile(
           dense: true,
           leading: Icon(Icons.calendar_today),
-          title: Text('Learning Plan',
-              style: GoogleFonts.ubuntu(color: Colors.grey)),
+          title: Text('Learning Plan', style: TextStyle(color: Colors.grey)),
         ),
         SizedBox(
           height: TryftSize.yMargin(context, 1.5),
@@ -64,7 +62,7 @@ class FirstWidget extends StatelessWidget {
         ListTile(
           dense: true,
           leading: Image.asset('images/chats.png'),
-          title: Text('Chat', style: GoogleFonts.ubuntu(color: Colors.grey)),
+          title: Text('Chat', style: TextStyle(color: Colors.grey)),
         ),
         SizedBox(
           height: TryftSize.yMargin(context, 1.5),
@@ -72,8 +70,7 @@ class FirstWidget extends StatelessWidget {
         ListTile(
           dense: true,
           leading: Icon(Icons.settings),
-          title:
-              Text('Settings', style: GoogleFonts.ubuntu(color: Colors.grey)),
+          title: Text('Settings', style: TextStyle(color: Colors.grey)),
         ),
         SizedBox(
           height: TryftSize.yMargin(context, 9),
@@ -105,29 +102,28 @@ class FirstWidget extends StatelessWidget {
                           children: [
                             Text(
                               'Upgrade to',
-                              style: GoogleFonts.ubuntu(
-                                  color: Colors.grey, fontSize: 12),
+                              style:
+                                  TextStyle(color: Colors.grey, fontSize: 12),
                             ),
                             SizedBox(
                               width: 5,
                             ),
                             Text('PRO',
-                                style: GoogleFonts.ubuntu(
+                                style: TextStyle(
                                     fontWeight: FontWeight.bold, fontSize: 12)),
                             SizedBox(
                               width: 5,
                             ),
                             Text(
                               'for ',
-                              style: GoogleFonts.ubuntu(
-                                  color: Colors.grey, fontSize: 12),
+                              style:
+                                  TextStyle(color: Colors.grey, fontSize: 12),
                             )
                           ],
                         ),
                         Text(
                           'more resources',
-                          style: GoogleFonts.ubuntu(
-                              color: Colors.grey, fontSize: 12),
+                          style: TextStyle(color: Colors.grey, fontSize: 12),
                         ),
                         SizedBox(height: 20),
                         Container(

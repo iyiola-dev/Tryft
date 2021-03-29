@@ -34,11 +34,11 @@ class Tiles extends StatelessWidget {
           Wrap(direction: Axis.vertical, children: [
             Text(
               title,
-              style: GoogleFonts.ubuntu(fontWeight: FontWeight.bold),
+              style: TextStyle(fontWeight: FontWeight.bold),
             ),
             Text(
               subtitle,
-              style: GoogleFonts.ubuntu(fontSize: 9.5, color: Colors.grey),
+              style: TextStyle(fontSize: 9.5, color: Colors.grey),
             ),
           ]),
           Expanded(child: trailing),
@@ -72,11 +72,11 @@ class RowTiles extends StatelessWidget {
       ),
       title: Text(
         title,
-        style: GoogleFonts.ubuntu(fontSize: 12, fontWeight: FontWeight.bold),
+        style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
       ),
       subtitle: Text(
         subtitle,
-        style: GoogleFonts.ubuntu(fontSize: 9.5, color: Colors.grey),
+        style: TextStyle(fontSize: 9.5, color: Colors.grey),
       ),
     );
   }
@@ -108,7 +108,7 @@ class SlimTile extends StatelessWidget {
             child: Center(
               child: Text(
                 'A1',
-                style: GoogleFonts.ubuntu(
+                style: TextStyle(
                     color: Colors.white,
                     fontSize: 10,
                     fontWeight: FontWeight.bold),

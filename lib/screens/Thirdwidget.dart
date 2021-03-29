@@ -27,7 +27,7 @@ class ThirdWidget extends StatelessWidget {
             child: Center(
               child: Text(
                 'Logout',
-                style: GoogleFonts.ubuntu(color: Colors.grey),
+                style: TextStyle(color: Colors.grey),
               ),
             ),
           )),
@@ -47,13 +47,13 @@ class ThirdWidget extends StatelessWidget {
             height: 10,
           ),
           Text('Emmanuel Chukwu',
-              style: GoogleFonts.ubuntu(fontWeight: FontWeight.bold)),
+              style: TextStyle(fontWeight: FontWeight.bold)),
           SizedBox(
             height: 5,
           ),
           Text(
             '100l',
-            style: GoogleFonts.ubuntu(color: Colors.grey),
+            style: TextStyle(color: Colors.grey),
           ),
           SizedBox(
             height: TryftSize.yMargin(context, 7),
@@ -62,7 +62,7 @@ class ThirdWidget extends StatelessWidget {
             alignment: Alignment.centerLeft,
             child: Text(
               'Result',
-              style: GoogleFonts.ubuntu(fontWeight: FontWeight.bold),
+              style: TextStyle(fontWeight: FontWeight.bold),
             ),
           ),
           SizedBox(
@@ -83,8 +83,7 @@ class ThirdWidget extends StatelessWidget {
               title: 'Igbo',
               headWidget: Text(
                 'A1',
-                style: GoogleFonts.ubuntu(
-                    fontSize: 10, fontWeight: FontWeight.bold),
+                style: TextStyle(fontSize: 10, fontWeight: FontWeight.bold),
               ),
               headColor: headTilesColor,
             ),
@@ -107,8 +106,7 @@ class ThirdWidget extends StatelessWidget {
               title: 'Yoruba         ',
               headWidget: Text(
                 'B3',
-                style: GoogleFonts.ubuntu(
-                    fontSize: 10, fontWeight: FontWeight.bold),
+                style: TextStyle(fontSize: 10, fontWeight: FontWeight.bold),
               ),
               headColor: headTilesColor,
             ),
@@ -121,7 +119,7 @@ class ThirdWidget extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text('Remainder',
-                    style: GoogleFonts.ubuntu(
+                    style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 13,
                     )),
