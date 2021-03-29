@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:percent_indicator/linear_percent_indicator.dart';
 
 import '../theme.dart';
 import '../tryftSize.dart';
@@ -47,11 +48,11 @@ class Tiles extends StatelessWidget {
 }
 
 class RowTiles extends StatelessWidget {
-  Color headerColor;
-  IconData icon;
-  Color iconColor;
-  String title;
-  String subtitle;
+  final Color headerColor;
+  final IconData icon;
+  final Color iconColor;
+  final String title;
+  final String subtitle;
   RowTiles(
       {this.headerColor, this.icon, this.iconColor, this.subtitle, this.title});
   @override
@@ -83,9 +84,9 @@ class RowTiles extends StatelessWidget {
 }
 
 class SlimTile extends StatelessWidget {
-  Color cardColor;
-  String title;
-  String subtitle;
+  final Color cardColor;
+  final String title;
+  final String subtitle;
   SlimTile({this.cardColor, this.title, this.subtitle});
   @override
   Widget build(BuildContext context) {
@@ -142,6 +143,51 @@ class SlimTile extends StatelessWidget {
           ])
         ],
       ),
+    );
+  }
+}
+
+class ListDividerTile extends StatelessWidget {
+  final String subject;
+  final double percentage;
+  final String percentageText;
+  final Color percentageColor;
+  ListDividerTile(
+      {this.subject,
+      this.percentage,
+      this.percentageColor,
+      this.percentageText});
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        SizedBox(
+          height: 20,
+        ),
+        Row(
+          children: [
+            Text(
+              'Unit 2',
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 12),
+            ),
+            Text(
+              ' - $subject',
+              style: TextStyle(color: Colors.grey[400], fontSize: 10),
+            ),
+            LinearPercentIndicator(
+              backgroundColor: Colors.white,
+              width: 80,
+              lineHeight: 5.2,
+              percent: percentage,
+              progressColor: percentageColor,
+            ),
+            Text(
+              percentageText,
+              style: TextStyle(color: percentageColor),
+            )
+          ],
+        ),
+      ],
     );
   }
 }

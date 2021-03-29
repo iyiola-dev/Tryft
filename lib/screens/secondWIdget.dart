@@ -7,6 +7,24 @@ import 'package:tryft/utils/widgets/tiles.dart';
 class SecondWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    List<String> image = [
+      'images/mon.png',
+      'images/tue.png',
+      'images/wed.png',
+      'images/thur.png',
+      'images/fri.png',
+      'images/sat.png',
+      'images/sun.png',
+    ];
+    List<String> days = [
+      "mon",
+      "tue",
+      "wed",
+      "thur",
+      "fri",
+      "sat",
+      "sun",
+    ];
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 22, vertical: 10),
       child: ListView(
@@ -78,19 +96,202 @@ class SecondWidget extends StatelessWidget {
               ],
             ),
           ),
+          SizedBox(
+            height: 10,
+          ),
           Container(
             height: TryftSize.yMargin(context, 50),
             child: Row(
               children: [
                 Container(
-                  height: TryftSize.yMargin(context, 43),
+                  padding: const EdgeInsets.all(16),
+                  height: TryftSize.yMargin(context, 35),
                   width: TryftSize.xMargin(context, 23),
                   decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(14)),
+                  child: ListView(
+                    children: [
+                      SizedBox(
+                        height: 15,
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            'Latest Results',
+                            style: TextStyle(fontWeight: FontWeight.bold),
+                          ),
+                          Row(children: [
+                            Text('more', style: TextStyle(color: Colors.grey)),
+                            Icon(
+                              Icons.arrow_right_alt,
+                              color: Colors.grey,
+                            ),
+                          ])
+                        ],
+                      ),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      ListDividerTile(
+                        subject: 'chemistry            ',
+                        percentage: 0.8,
+                        percentageText: '86%',
+                        percentageColor: buttonColor,
+                      ),
+                      Divider(),
+                      ListDividerTile(
+                        subject: 'Biology                ',
+                        percentage: 0.78,
+                        percentageText: '83%',
+                        percentageColor: cardColor,
+                      ),
+                      Divider(),
+                      ListDividerTile(
+                        subject: 'use of library     ',
+                        percentage: 0.81,
+                        percentageText: '86%',
+                        percentageColor: cardColor,
+                      ),
+                      Divider(),
+                      ListDividerTile(
+                        subject: 'Maths               ',
+                        percentage: 0.8,
+                        percentageText: '93%',
+                        percentageColor: Colors.greenAccent,
+                      ),
+                      Divider(),
+                      ListDividerTile(
+                        subject: 'English               ',
+                        percentage: 0.5,
+                        percentageText: '43%',
+                        percentageColor: Colors.red,
+                      ),
+                    ],
+                  ),
+                ),
+                SizedBox(
+                  width: 20,
+                ),
+                Container(
+                  padding: const EdgeInsets.all(12),
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(14)),
+                  height: TryftSize.yMargin(context, 35),
+                  width: TryftSize.xMargin(context, 25),
+                  child: ListView(
+                    children: [
+                      SizedBox(
+                        height: 15,
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            'Time spent on learning',
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold, fontSize: 10),
+                          ),
+                          Row(children: [
+                            Text('last week',
+                                style:
+                                    TextStyle(color: Colors.grey, fontSize: 9)),
+                            Icon(
+                              Icons.arrow_right_alt,
+                              color: Colors.grey,
+                            ),
+                          ]),
+                        ],
+                      ),
+                      SizedBox(
+                        height: 20,
+                      ),
+                      Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: days
+                              .map(
+                                (e) => Text(
+                                  e,
+                                  style: TextStyle(
+                                      fontSize: 10, color: Colors.grey),
+                                ),
+                              )
+                              .toList()),
+                      SizedBox(
+                        height: 20,
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: image
+                            .map((e) => Center(child: Image.asset(e)))
+                            .toList(),
+                      ),
+                      SizedBox(
+                        height: 30,
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Wrap(
+                            children: [
+                              CircleAvatar(
+                                backgroundColor: buttonColor,
+                                radius: 5,
+                              ),
+                              SizedBox(
+                                width: 3,
+                              ),
+                              Text(
+                                'Vocabulary',
+                                style:
+                                    TextStyle(color: Colors.grey, fontSize: 11),
+                              )
+                            ],
+                          ),
+                          Wrap(
+                            children: [
+                              CircleAvatar(
+                                backgroundColor: Colors.red,
+                                radius: 5,
+                              ),
+                              SizedBox(
+                                width: 3,
+                              ),
+                              Text(
+                                'Vocabulary',
+                                style:
+                                    TextStyle(color: Colors.grey, fontSize: 11),
+                              )
+                            ],
+                          ),
+                          Wrap(
+                            children: [
+                              CircleAvatar(
+                                backgroundColor: buttonColor.withOpacity(0.3),
+                                radius: 5,
+                              ),
+                              SizedBox(
+                                width: 3,
+                              ),
+                              Text(
+                                'Vocabulary',
+                                style:
+                                    TextStyle(color: Colors.grey, fontSize: 11),
+                              )
+                            ],
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
                 )
               ],
             ),
+          ),
+          SizedBox(
+            height: 10,
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
